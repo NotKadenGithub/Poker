@@ -2,6 +2,7 @@
 
 import random
 from db import cardImages
+from db2 import cards
 
 print("""
  /$$$$$$$           /$$                          
@@ -45,6 +46,8 @@ deck = ["spaAce","spa2","spa3","spa4","spa5","spa6","spa7","spa8","spa9","spa10"
 
 usersHand = []
 
+computersHand = []
+
 pool = []
 
 
@@ -54,3 +57,5 @@ def removeCards(amount, deckToAdd):
     deckToAdd.append(deck[randomCard])
     del deck[randomCard]
 
+removeCards(2, computersHand)
+removeCards(2, usersHand)
